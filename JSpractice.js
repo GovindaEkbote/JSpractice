@@ -195,6 +195,7 @@
 //     console.log(data)
 // })
 
+/*
 const p1 = {
     name : "Govinda",
     loca :{
@@ -214,3 +215,86 @@ console.log("start")
 setInterval(()=>{
     console.log("Runn")
 },1000)
+
+*/
+
+// var a = 1; // number dataType
+// var b = true; // boolena
+
+// if(a===b)
+// {
+//     console.log("True")
+// }else{
+//     console.log("False");    
+// }
+
+
+
+// function display(first, ...rest)
+// {
+//     console.log(first);
+//     console.log(rest)
+// }
+// display(12,14,1,41,414)
+
+
+// var arr = [1,2,3,4,5,6,7,8,9,10]
+// const newArr = arr.find((num) => num%2==0)
+// console.log(newArr)
+// const newArr2 = arr.filter((num) => num%2==0)
+// console.log(newArr2)  
+// console.log(arr.slice(1,4));
+
+
+// const findMethod = arr.map((e)=> e*2)
+// console.log(findMethod)
+
+// arr.filter((e) => 
+//     console.log( e*4) )
+
+
+function add(a,b)
+{
+    return a+b;
+}
+console.log(add(5,5))
+console.log(add(5,5))
+console.log(add(5,5))
+
+var result = 0;
+function addImpure(num)
+{
+    return result = result + num;
+}
+console.log(addImpure(5))
+console.log(addImpure(5))
+
+
+const person = {
+    name : "XYZ",
+    mobile: 1234567890,
+    location : {
+        city: "abc",
+        country: "Ind"
+    }
+}
+// const shallowCopy = Object.assign({},person)
+// shallowCopy.location.city = "ASD";
+// console.log(shallowCopy.location.city)
+// console.log(person.location.city)
+
+const deepCopy = JSON.parse(JSON.stringify(person))
+deepCopy.location.city = "ASD";
+console.log(deepCopy.location.city)
+console.log(person.location.city)
+
+
+function OutterFun(){
+    const name = "Outer Variable";
+    function InnerFun(){
+        console.log(name)
+    }
+    return InnerFun;
+}
+const closur = OutterFun()
+closur()
